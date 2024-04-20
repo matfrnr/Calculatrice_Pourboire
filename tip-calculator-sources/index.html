@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Big+Shoulders+Display:wght@700&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Open+Sans&family=Poppins:wght@200;400;600&family=Raleway:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet">
+    <title>Tip calculator app</title>
+
+</head>
+<body>
+
+<main>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="./images/logo.svg" alt="logo splitter">
+        </div>
+
+        <div class="calculatrice">
+            <div class="choix flex-column">
+                <div class="bill flex-column">
+                    <p class="erreur">Can't be zero</p>
+                    <label for="bill">Bill</label>
+                    <input type="number" name="total bill" id="bill" placeholder="0">
+                    <img src="./images/icon-dollar.svg" alt="dollar">
+                </div>
+                <div class="percentages-container flex-column">
+                    <h1>Select Tip %</h1>
+                    <div class="percentages">
+                        <button percentage="0.05" class="percentage-btn" c>5%</button>
+                        <button percentage="0.10" class="percentage-btn">10%</button>
+                        <button percentage="0.15" class="percentage-btn">15%</button>
+                        <button percentage="0.25" class="percentage-btn">25%</button>
+                        <button percentage="0.50" class="percentage-btn">50%</button>
+                        <input type="number" name="custom percentage" id="custom-percentage" placeholder="Custom"
+                               class="custom" min="1" max="70">
+                    </div>
+                </div>
+                <div class="number-of-people flex-column">
+                    <p class="warning-people">Can't be zero</p>
+                    <label for="number">Number of People</label>
+                    <input type="number" name="number of people" id="number" placeholder="0">
+                    <img src="./images/icon-person.svg" alt="person icon">
+                </div>
+            </div>
+            <div class="output flex-column">
+                <div class="results flex-column">
+                    <div class="tip-amount flex-row">
+                        <div class="output-text">
+                            <p>Tip Amount</p>
+                            <span class="sub-text">/ person</span>
+                        </div>
+                        <div class="amount">
+                            <p>&dollar;<span class="tip-amount-value">0.00</span></p>
+                        </div>
+                    </div>
+                    <div class="tip-amount flex-row">
+                        <div class="output-text">
+                            <p>Total</p>
+                            <span class="sub-text">/ person</span>
+                        </div>
+                        <div class="amount">
+                            <p>&dollar;<span class="val">0.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
